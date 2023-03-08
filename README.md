@@ -1,2 +1,2 @@
-# fuid
-FUID - human-Friendly Unique ID
+# FUID
+FUID: human-Friendly Unique ID
