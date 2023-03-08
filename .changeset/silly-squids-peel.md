@@ -1,0 +1,5 @@
+---
+"fuid": patch
+---
+
+fix CI
