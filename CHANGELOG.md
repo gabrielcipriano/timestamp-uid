@@ -1,5 +1,11 @@
 # timestamp-uid
 
+## 0.1.1
+
+### Patch Changes
+
+- 294b6b8: update meta info
+
 ## 0.1.0
 
 ### Minor Changes
