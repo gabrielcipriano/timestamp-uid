@@ -1,5 +1,11 @@
 # timestamp-uid
 
+## 0.1.2
+
+### Patch Changes
+
+- 46cbd45: update keywords
+
 ## 0.1.1
 
 ### Patch Changes
