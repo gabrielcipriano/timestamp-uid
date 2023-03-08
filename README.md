@@ -1,2 +1,2 @@
-# FUID
-FUID: human-Friendly Unique ID
+# TUID
+TUID: a human-readable timestamp unique identifier
