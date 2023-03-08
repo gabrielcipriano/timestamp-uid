@@ -1,19 +1,9 @@
-// FUID - human-Friendly Unique ID
+// tuid - human-readable Timestamp Unique ID
 
-import crypto from "crypto"
+import { randomBase36 } from "./randomBase36"
 
-const randomInt = crypto?.randomInt || ((int) => Math.floor(Math.random() * int));
 
-function randomBase36(length: number) {
-  let entropy = ""
-
-  while (entropy.length < length)
-    entropy = entropy + randomInt(36).toString(36)
-
-  return entropy
-}
-
-export function fuid(randLength = 4) {
+export function tuid(randLength = 4) {
   return encode({ randLength })
 }
 
@@ -36,16 +26,16 @@ export function encode(options = {}) {
 
   const entropy = randStr || (randValue && randValue.toString(36)) || randomBase36(randLength || 4) // 36^4 = 1/1,679,616
 
-  const _fuid = `${year}${month}${day}-${milisecondsBase36}-${entropy}`
+  const _tuid = `${year}${month}${day}-${milisecondsBase36}-${entropy}`
 
-  return _fuid
+  return _tuid
 }
 
-export function decode(_fuid: string) {
-  const [date, milisecondsAtDay, randStr] = _fuid.split('-')
+export function decode(_tuid: string) {
+  const [date, milisecondsAtDay, randStr] = _tuid.split('-')
 
   if (!date || !milisecondsAtDay || !randStr)
-    throw new Error("string provided is not a fuid")
+    throw new Error("string provided is not a tuid")
 
   const isodate = `20${date.substring(0, 2)}-${date.substring(2, 4)}-${date.substring(4)}`
 

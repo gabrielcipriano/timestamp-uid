@@ -1,1 +1,1 @@
-export { fuid, decode, encode } from './fuid'
+export { tuid, decode, encode } from './tuid'
