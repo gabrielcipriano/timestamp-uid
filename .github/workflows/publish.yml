@@ -10,18 +10,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     environment: production
-    env:
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 18.x
           cache: "npm"
-      - name: Debug environment variables
-        run: |
-          echo "NPM_TOKEN: $NPM_TOKEN"
-          env
       - run: npm install --frozen-lockfile
       - name: Create Release Pull Request then Publish
         id: changesets
