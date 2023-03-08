@@ -1,5 +1,11 @@
 # fuid
 
+## 0.2.2
+
+### Patch Changes
+
+- ff70373: publish
+
 ## 0.2.1
 
 ### Patch Changes
