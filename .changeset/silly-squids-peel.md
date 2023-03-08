@@ -1,5 +1,0 @@
----
-"fuid": patch
----
-
-fix CI
